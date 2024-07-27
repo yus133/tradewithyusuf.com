@@ -1,0 +1,161 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for typing effect */ 
+        .typing-effect {
+            font-weight: bold;
+            display: inline-block;
+            border-right: 2px solid #4299e1; /* Blue color for cursor */
+            animation: blink-cursor 0.7s step-end infinite;
+        }
+
+        @keyframes blink-cursor {
+            from { border-right-color: #4299e1; }
+            to { border-right-color: transparent; }
+        }
+
+        .underline {
+            display: inline-block;
+            position: relative;
+        }
+
+        .underline::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -0.25em;
+            width: 100%;
+            height: 2px;
+            background-color: #4299e1; /* Blue color for underline */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-xl font-bold text-gray-800">My Portfolio</a>
+                <div class="flex space-x-4">
+                    <a href="#about" class="text-gray-800 hover:text-blue-500">About</a>
+                    <a href="#portfolio" class="text-gray-800 hover:text-blue-500">Portfolio</a>
+                    <a href="#contact" class="text-gray-800 hover:text-blue-500">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+             
+    <!-- Hero Section -->
+    <header class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-16 text-center">
+            <h1 class="text-4xl font-bold">Hello, I'm Yusuf Niazi</h1>
+            <img src="/pictures/man talking.webp" class=" w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-500   " alt="">
+            <p class="mt-4">I am a <span id="typing" class="typing-effect"></span></p>
+            <a href="#portfolio" class="mt-6 inline-block bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600">View My Work</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto px-6 py-16 ">
+        <h2 class="text-3xl font-bold text-center mb-8 hover:text-blue-500">About Me</h2>
+        <p class="text-center max-w-2xl mx-auto">I am a professional web developer with 2 months of experience and a trader with 6 months of experience in ICT trading. I have worked as a CSR for 6 months at Rapid Squad and ZS Communications and have experience as a telemarketer. I have also created a gym website and want to create a travel agency for Pakistan visa named Rapid Services, located in Islamabad.</p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="bg-gray-200 py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">My Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 1" class="w-full">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">Project Title</h3>
+                        <p class="mt-2">Brief description of the project.</p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 2" class="w-full">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">Project Title</h3>
+                        <p class="mt-2">Brief description of the project.</p>
+                    </div>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 3" class="w-full">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold">Project Title</h3>
+                        <p class="mt-2">Brief description of the project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="max-w-2xl mx-auto">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700">Name</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg" required>
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-gray-700">Message</label>
+                <textarea id="message" name="message" class="w-full px-4 py-2 border rounded-lg" required></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600">Send Message</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Yusuf Niazi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for typing effect -->
+    <script>
+        const texts = ["Web Developer", "Trader", "Web3 Developer"];
+        let count = 0;
+        let index = 0;
+        let currentText = "";
+        let letter = "";
+
+        (function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            document.getElementById("typing").textContent = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(() => {
+                    setTimeout(type, 500);
+                }, 1000); // Wait before deleting the text
+            } else {
+                setTimeout(type, 200); // Adjust typing speed
+            }
+        })();
+    </script>
+
+</body>
+</html>
